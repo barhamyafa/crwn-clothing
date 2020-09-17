@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import {currentUserSelector} from '../../redux/user/user.selectors'
+
 import './header.styles.scss'
 
 import { ReactComponent as Logo } from '../../assests/crown.svg'
@@ -45,7 +47,7 @@ const Header = ({ currentUser, hidden }) => {
 }
 
 const mapStateToProps = state => ({
-    currentUser: state.user.currentUser,
+    currentUser: currentUserSelector(state),
     hidden: state.cart.hidden
 })
 
