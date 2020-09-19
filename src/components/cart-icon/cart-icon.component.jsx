@@ -11,7 +11,6 @@ import { toggleCartHidden } from '../../redux/cart/cart.actions'
 
 import { cartItemsCountSelector } from '../../redux/cart/cart.selectors'
 
-debugger
 
 const CartIcon = ({ toggleCartHidden, cartItemsCount }) => {
     return (

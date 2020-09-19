@@ -13,3 +13,18 @@ export const addItem = (item) => {
         payload: item
     }
 }
+
+export const removeItem =(item) => {
+    return {
+        type: cartActionTypes.REMOVE_ITEM,
+        payload: item
+    }
+}
+
+export const decreaseQuantity =(item) => {
+    debugger
+    return {
+        type: cartActionTypes.DECREASE_QUANTITY,
+        payload: item
+    }
+}
