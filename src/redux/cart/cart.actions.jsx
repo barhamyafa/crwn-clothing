@@ -22,7 +22,6 @@ export const removeItem =(item) => {
 }
 
 export const decreaseQuantity =(item) => {
-    debugger
     return {
         type: cartActionTypes.DECREASE_QUANTITY,
         payload: item

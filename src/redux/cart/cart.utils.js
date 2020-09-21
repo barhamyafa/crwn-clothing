@@ -19,7 +19,6 @@ export const removeCartItem = (cartItems, itemToRemove) => {
 }
 
 export const decreaseItemQuantity = (cartItems, cartItemToDecrease) => {
-    debugger
     const isExistingCartItem = cartItems.find((cartItem) => cartItem.id === cartItemToDecrease.id)
     if (isExistingCartItem.quantity === 1) {
         return removeCartItem (cartItems, cartItemToDecrease)
