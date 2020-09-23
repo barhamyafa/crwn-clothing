@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
+import StripeCheckoutButton from '../../components/stripe-button/stripe-button.componenet';
 
 import {
     cartItemsSelector,
@@ -34,6 +35,13 @@ const CheckoutPage = ({ cartItems, total, removetItem }) => (
             <CheckoutItem key={cartItem.id} cartItem={cartItem} />
         ))}
         <div className='total'>TOTAL: ${total}</div>
+        <div className='warning'>
+            https://www.freebinchecker.com/credit-card-generator/
+            * Please use the following test credit card info for payments *
+            Visa: 4769 7194 6976 8434  CVV:572  EXP: 12/21
+
+        </div>
+        <StripeCheckoutButton price={total} />
     </div>
 );
 
